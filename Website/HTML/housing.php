@@ -1,0 +1,357 @@
+<?php session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Housing Loan - Loan Experts</title>
+<meta name="description" content="Get your dream home with our housing loans.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/LoanExpertsWebsite/Website/CSS/style.css">
+
+</head>
+<body>
+<main id="main-content">
+
+<!-- Header -->
+   <?php require_once __DIR__ . '/../components/header.php'; ?>
+
+   <!-- Housing Loan Section -->
+<section class="hl-section">
+
+    <h1 class="hl-title">Housing Loan for Your Dream Home</h1>
+
+    <p class="hl-subtitle">
+        Owning a home is one of life’s most significant achievements, and at Loan Experts, we’re here to make that dream come true. Whether you’re looking to buy a new home, construct a house, or renovate your existing one, our affordable housing loans offer the perfect solution. With competitive interest rates, flexible repayment options, and easy approval processes, we ensure that you take the first step toward homeownership with confidence.
+    </p>
+
+    <!-- Cards Container -->
+    <div class="hl-container">
+
+        <!-- Card 1 -->
+        <div class="hl-card">
+            <img src="/LoanExpertsWebsite/Website//images/interest.avif" alt="Business Expansion">
+            <h3>Low Interest Rates</h3>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="hl-card">
+            <img src="/LoanExpertsWebsite/Website/images/flexible.jfif" alt="Working Capital">
+            <h3>Flexible Repayment Options</h3>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="hl-card">
+            <img src="/LoanExpertsWebsite/Website/images/approve.avif" alt="Equipment Finance">
+            <h3>Easy Application and Fast Approval</h3>
+        </div>
+
+    </div>
+
+</section>
+<div class="apply-btn-wrapper">
+    <button class="apply-btn open-apply">Apply Now</button>
+</div>
+
+<section class="who-apply">
+
+<h2 class="who-title">Who Can Apply for a Housing Loan?</h2>
+
+<p class="who-subtitle">
+At <b>Loan Experts</b>, we believe that everyone deserves the opportunity to own their dream home. 
+That’s why we offer flexible housing loans tailored to meet the needs of a wide range of applicants. 
+Whether you’re a salaried professional, self-employed, or a business owner, you may be eligible for a housing loan with us.
+</p>
+
+<div class="housing-container">
+
+    <!-- Card 1 -->
+    <div class="housing-card">
+        <img src="/LoanExpertsWebsite/Website/images/salary.avif">
+        <div class="card-content salaried">
+            <h3>Salaried Individuals</h3>
+            <p>
+            If you are employed with a steady income, you are eligible to apply for a housing loan.
+            We assess your income, job stability, and credit score to determine your eligibility.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="housing-card">
+        <img src="/LoanExpertsWebsite/Website/images/self.jfif">
+        <div class="card-content self">
+            <h3>Self-Employed Individuals</h3>
+            <p>
+            Are you a freelancer, consultant, or running your own business? Our housing loan
+            solutions are designed to meet the unique financial profiles of self-employed individuals.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="housing-card">
+        <img src="/LoanExpertsWebsite/Website/images/business.jfif">
+        <div class="card-content business">
+            <h3>Business Owners</h3>
+            <p>
+            Business owners can also apply for housing loans to purchase, construct,
+            or renovate a home. We consider your business’s financial health.
+            </p>
+        </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="housing-card">
+        <img src="/LoanExpertsWebsite/Website/images/360_F_611292318_udZQ4r9PCvdrQPmhpmoOA9TVadqFecRS.jpg">
+        <div class="card-content salaried">
+            <h3>First-Time Home Buyers</h3>
+            <p>
+            Buying your first home is a significant milestone, and we are here to make the process easier.
+            If you're a first-time home buyer, we offer specialized loans with flexible terms and interest rates
+            that fit your budget.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="housing-card">
+        <img src="/LoanExpertsWebsite/Website/images/joint.jfif">
+        <div class="card-content self">
+            <h3>Joint Applicants</h3>
+            <p>
+            Want to apply for a housing loan with your spouse, family member, or partner?
+            Joint applications can help increase your loan eligibility by combining incomes.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="housing-card">
+        <img src="/LoanExpertsWebsite/Website/images/nri.avif">
+        <div class="card-content business">
+            <h3>NRIs (Non-Resident Indians)</h3>
+            <p>
+            We also offer housing loans to Non-Resident Indians (NRIs) looking to purchase
+            property in India with simplified application processes.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+ <!-- Schedule consultation Button -->
+<div class="cta-container">
+  <a href="#" class="consult-btn cta-btn" onclick="openAppointment('consultation'); return false;">
+    Schedule a Free Consultation
+  </a>
+</div>
+
+<!-- Eligibility -->
+<section class="eligibility-section">
+    <div class="inner-container">
+    <h2 class="section-title">Eligibility Criteria</h2>
+
+    <div class="eligibility-wrapper">
+       <div class="eligibility-container <?php echo !isset($_SESSION['user_id']) ? 'blur-content' : ''; ?>"> 
+      <!-- LEFT CARD -->
+      <div class="eligibility-card">
+        <ol>
+          <strong>1. Age Requirement:</strong> The applicant must be between <strong>21 and 65 years</strong> of age at the time of loan maturity. This ensures that you are in the income-earning phase of life when repaying the loan.</p>
+          <p><strong>2. Income Level:</strong></p>
+
+<ul>
+<li><strong>Salaried Professionals:</strong> Must be employed with a recognized public or private sector company for at least <strong>1 year</strong>.</li>
+<li><strong>Self-Employed and Business Owners:</strong> Must have a business vintage of at least <strong>2 years</strong> to qualify.</li>
+</ul>
+          <p><strong>3. Employment Type:</strong></p>
+
+<ul>
+<li><strong>Salaried Professionals:</strong> Must be employed with a recognized public or private sector company for at least <strong>1 year</strong>.</li>
+<li><strong>Self-Employed and Business Owners:</strong> Must have a business vintage of at least <strong>2 years</strong> to qualify.</li>
+</ul>
+          <p><strong>4. Credit Score:</strong> A minimum <strong>credit score of 650</strong> is required to apply for a housing loan. A higher credit score improves your chances of approval and allows you to secure better interest rates.</p>
+
+      </div>
+
+      <!-- RIGHT CARD -->
+      <div class="eligibility-card">
+        <ol start="5">
+          <p><strong>5. Property Location:</strong> The property must be located in India and meet all legal and construction standards, such as having the necessary permits and clear title ownership.</p>
+
+<p><strong>6. Loan Tenure:</strong> Loan tenure can range from <strong>10 to 30 years</strong>, depending on your repayment capacity and preference. The tenure you choose will affect your monthly EMI and the total interest paid.</p>
+
+<p><strong>7. Down Payment:</strong> Typically, you need to make a down payment of at least <strong>10% to 25%</strong> of the property's purchase price. The remaining amount can be financed through the loan.</p>
+
+<p><strong>8. Financial Stability:</strong> You must demonstrate financial stability with proof of income tax returns, bank statements, and audited financials (for self-employed individuals and business owners). This helps us gauge your ability to repay the loan.</p>
+      </div>
+  </div>
+  <?php if (!isset($_SESSION['user_id'])): ?>
+        <div class="lock-overlay">
+            <div class="lock-box">
+                <div class="lock-icon">🔒</div>
+                <p>
+                    To check your eligibility,<br>
+                    <a href="/login.php" class="login-link">
+    please login
+  </a>
+                </p>
+            </div>
+        </div>
+      <?php endif; ?>
+    </div>
+
+  </div>
+  
+</section>
+
+<section class="faq-section">
+
+    <h2 class="faq-title">Frequently Asked Questions - FAQs</h2>
+
+    <div class="faq-container">
+
+        <!-- FAQ 1 (Open by default) -->
+        <div class="faq-item active">
+
+            <div class="faq-question">
+                <span class="faq-icon">−</span>
+                What is the maximum loan amount I can get for a housing loan?
+            </div>
+
+            <div class="faq-answer">
+                The maximum loan amount depends on several factors, including your income,
+credit score, and the value of the property. Typically, lenders finance
+<strong>up to 75% to 90%</strong> of the property's value. You can contact our
+team to determine your eligibility and loan amount.
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+
+            <div class="faq-question">
+                <span class="faq-icon">+</span>
+                What is the interest rate on a housing loan?
+            </div>
+
+            <div class="faq-answer">
+               Interest rates depend on the bank, loan type, and your credit profile.
+Most housing loan rates range between 8% – 11% per year.
+            </div>
+
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+
+            <div class="faq-question">
+                <span class="faq-icon">+</span>
+                Can I get a housing loan for a property under construction?
+            </div>
+
+            <div class="faq-answer">
+                Yes, most banks offer loans for under-construction properties, but the
+builder must be approved by the bank.
+            </div>
+            </div>
+            <!-- FAQ 4 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        How long does it take to get a housing loan approved?
+    </div>
+    <div class="faq-answer">
+        Loan approval usually takes 3–7 working days depending on document
+verification and bank processing time.
+    </div>
+</div>
+
+<!-- FAQ 5 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        Can I prepay my housing loan?
+    </div>
+    <div class="faq-answer">
+        Yes, most banks allow prepayment of housing loans with minimal or no
+penalty depending on the loan terms.
+    </div>
+</div>
+
+<!-- FAQ 6 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        What are the tax benefits of a housing loan?
+    </div>
+    <div class="faq-answer">
+        You can claim tax deductions under Sections 80C and 24(b) of the Income
+Tax Act for principal repayment and interest payments.
+    </div>
+</div>
+
+<!-- FAQ 7 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        What documents are required for a housing loan?
+    </div>
+    <div class="faq-answer">
+        Common documents include ID proof, address proof, income proof,
+bank statements, and property documents.
+    </div>
+</div>
+
+<!-- FAQ 8 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        How is my housing loan eligibility calculated?
+    </div>
+    <div class="faq-answer">
+        Eligibility depends on income, existing liabilities, credit score,
+age, and employment stability.
+</div>
+<!-- FAQ 9 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+       What is the tenure for a housing loan?
+    </div>
+    <div class="faq-answer">
+        Housing loan tenure usually ranges from <strong>10 to 30 years</strong>. The
+tenure depends on your repayment capacity, age, and lender policies.
+Longer tenure reduces EMI but increases total interest paid.
+    </div>
+</div>
+
+<!-- FAQ 10 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        Can NRIs apply for a housing loan?
+    </div>
+    <div class="faq-answer">
+        Yes, <strong>Non-Resident Indians (NRIs)</strong> can apply for housing loans
+in India to purchase residential properties. Banks may require additional
+documentation such as overseas employment proof and NRE/NRO bank accounts.
+    </div>
+</div>
+
+</div> 
+</section>
+<?php require_once __DIR__ . '/../components/apply-form-ui.php'; ?>
+<?php require_once __DIR__ . '/../components/schedule_modal.php'; ?>
+<?php require_once __DIR__ . '/../components/footer.php'; ?>
+
+<script src="/LoanExpertsWebsite/Website/js/main.js" defer></script>
+
+</body>
+</html>

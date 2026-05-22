@@ -1,0 +1,363 @@
+<?php session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education Loan - Loan Experts</title>
+<meta name="description" content="Get education loans with easy eligibility, flexible repayment options, and expert guidance from Loan Experts. Study in India or abroad with confidence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/LoanExpertsWebsite/Website/CSS/style.css">
+
+</head>
+<body>
+<main id="main-content">
+
+<!-- Header -->
+   <?php require_once __DIR__ . '/../components/header.php'; ?>
+
+<!-- Education Loan Section -->
+<section class="edu-section">
+
+    <h1 class="edu-title">Affordable Loans for Your Education</h1>
+
+    <p class="edu-subtitle">
+        At <strong>Loan Experts</strong>, we believe that finances should never stand in the way of your academic aspirations.
+Our <strong>education loans</strong> are designed to make higher education more accessible and affordable,
+whether you're studying in India or abroad. With competitive interest rates, flexible repayment options,
+and easy application processes, we provide the financial support you need to focus on your studies and achieve your goals.
+    </p>
+
+    <!-- Cards Container -->
+    <div class="edu-container">
+
+        <!-- Card 1 -->
+        <div class="edu-feature-card">
+            <img src="/LoanExpertsWebsite/Website/images/100.png" alt="100% Financing">
+            <h3>100% Financing</h3>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="edu-feature-card">
+            <img src="/LoanExpertsWebsite/Website/images/flexi.jfif" alt="Flexible Repayment Options">
+            <h3>Flexible Repayment Options</h3>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="edu-feature-card">
+            <img src="/LoanExpertsWebsite/Website/images/aff.webp" alt="Affordable Interest Rates">
+            <h3>Affordable Interest Rates</h3>
+        </div>
+
+    </div>
+
+</section>
+<div class="apply-btn-wrapper">
+    <button class="apply-btn open-apply">Apply Now</button>
+</div>
+
+<section class="who-apply">
+
+<h2 class="who-title">Who Can Apply for a Education Loan?</h2>
+
+<p class="who-subtitle">
+At <b>Loan Experts</b>, our education loans are designed to help students from all backgrounds
+pursue their academic dreams. Whether you're planning to study in India or abroad,
+our flexible eligibility criteria ensure that a wide range of applicants can apply.
+</p>
+
+<div class="edu-container">
+
+    <!-- Card 1 -->
+    <div class="edu-card">
+        <img src="/LoanExpertsWebsite/Website/images/student.jpg" alt="Students eligible for education loan">
+        <div class="card-content salaried">
+            <h3>Students</h3>
+            <p>
+            Any student who has secured admission to a recognized university or institution
+for a graduate, postgraduate, vocational, or professional course is eligible to apply.
+The loan can be used to cover tuition fees, accommodation, and other educational expenses.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="edu-card">
+        <img src="/LoanExpertsWebsite/Website/images/co-applicant.jfif">
+        <div class="card-content self">
+            <h3>Co-Applicants</h3>
+            <p>
+            A co-applicant (usually a parent, guardian, or spouse) with a steady source of income
+is required for the loan. The co-applicant acts as a guarantor and helps improve
+the chances of loan approval.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="edu-card">
+        <img src="/LoanExpertsWebsite/Website/images/nri.avif">
+        <div class="card-content business">
+            <h3>NRIs and International Students</h3>
+            <p>
+            Non-Resident Indians (NRIs) and students planning to study abroad can also apply
+for an education loan to cover their tuition and living expenses at overseas universities.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+ <!-- Schedule consultation Button -->
+<div class="cta-container">
+  <a href="#" class="consult-btn cta-btn" onclick="openAppointment('consultation'); return false;">
+    Schedule a Free Consultation
+  </a>
+</div>
+
+<!-- Eligibility -->
+<section class="eligibility-section">
+  <div class="inner-container">
+    
+    <h2 class="section-title">Eligibility Criteria</h2>
+
+    <div class="eligibility-wrapper">
+        <div class="eligibility-container <?php echo !isset($_SESSION['user_id']) ? 'blur-content' : ''; ?>">
+
+      <!-- LEFT CARD -->
+<div class="eligibility-card">
+
+<p><strong>1. Age Requirement:</strong> The applicant must be at least <strong>18 years old</strong> at the time of applying for the loan. There is no maximum age limit for the co-applicant.</p>
+
+<p><strong>2. Admission to a Recognized Institution:</strong></p>
+
+<ul>
+<li>The student must have secured admission to a recognized institution in India or abroad.</li>
+<li>Undergraduate and Postgraduate Degrees</li>
+<li>Diploma Programs</li>
+<li>Professional Courses (MBA, Engineering, Medicine, etc.)</li>
+<li>Vocational Training Courses</li>
+<li>Study Abroad Programs</li>
+</ul>
+
+<p><strong>3. Co-Applicant Requirement:</strong> A co-applicant is mandatory for all education loan applications. This can be a parent, guardian, or spouse.</p>
+
+<p><strong>4. Credit Score:</strong> The co-applicant should have a credit score of <strong>650 or above</strong>.</p>
+
+</div>
+
+
+<!-- RIGHT CARD -->
+<div class="eligibility-card">
+<p><strong>5. Loan Tenure:</strong> Education loan repayment usually ranges from <strong>5 to 10 years</strong>.</p>
+
+<p><strong>6. Income Criteria:</strong></p>
+
+<ul>
+<li><strong>Co-Applicant's Income:</strong> Minimum monthly income of ₹20,000.</li>
+<li><strong>Self-Employed Co-Applicants:</strong> Must provide proof of income for the last 2 years.</li>
+</ul>
+
+<p><strong>7. Academic Performance:</strong> The student should meet the academic performance criteria set by the institution.</p>
+
+<p><strong>8. Debt to Income Ratio:</strong> Monthly debt payments should not exceed <strong>50% of total income</strong>.</p>
+
+<p><strong>9. Loan-to-Value Ratio:</strong> Banks typically finance up to <strong>60-70% of the property value</strong>.</p>
+</div>
+      </div>
+
+      <?php if (!isset($_SESSION['user_id'])): ?>
+        <div class="lock-overlay">
+            <div class="lock-box">
+                <div class="lock-icon">🔒</div>
+                <p>
+                    To check your eligibility,<br>
+                    <a href="/login.php" class="login-link">
+    please login
+  </a>
+                </p>
+            </div>
+        </div>
+      <?php endif; ?>
+    </div>
+  </div>
+</section>
+<section class="faq-section">
+
+    <h2 class="faq-title">Frequently Asked Questions - FAQs</h2>
+
+    <div class="faq-container">
+
+        <!-- FAQ 1 (Open by default) -->
+        <div class="faq-item active">
+
+            <div class="faq-question">
+                <span class="faq-icon">−</span>
+                What expenses are covered by an education loan?
+            </div>
+
+            <div class="faq-answer">
+                <p>An education loan covers a wide range of education-related expenses, including:</p>
+
+<ul>
+<li><strong>Tuition fees</strong></li>
+<li><strong>Accommodation/hostel fees</strong></li>
+<li><strong>Books and study materials</strong></li>
+<li><strong>Travel expenses</strong> (for study abroad)</li>
+<li><strong>Lab fees and equipment costs</strong></li>
+<li><strong>Other related expenses</strong> such as project work or study tours</li>
+</ul>
+
+</div>
+</div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+
+            <div class="faq-question">
+                <span class="faq-icon">+</span>
+                What is the interest rate on an education loan?
+            </div>
+
+            <div class="faq-answer">
+               Interest rates typically range between <strong>8% to 12%</strong> depending on the bank,
+loan amount, and credit profile of the co-applicant.
+            </div>
+
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+
+            <div class="faq-question">
+                <span class="faq-icon">+</span>
+                Can I apply for an education loan if I am studying abroad?
+            </div>
+
+            <div class="faq-answer">
+                Yes. Education loans are available for students planning to study abroad
+in recognized universities for undergraduate, postgraduate, and professional programs.
+            </div>
+            </div>
+            <!-- FAQ 4 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        What is a moratorium period in an education loan?
+    </div>
+    <div class="faq-answer">
+        The moratorium period is the time during which you are not required to repay the loan.
+It usually includes the course duration plus <strong>6 to 12 months</strong> after graduation.
+    </div>
+</div>
+
+<!-- FAQ 5 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        Is a co-applicant mandatory for an education loan?
+    </div>
+    <div class="faq-answer">
+        Yes. A co-applicant such as a parent, guardian, or spouse is usually required
+to guarantee the loan and ensure repayment capability.
+    </div>
+</div>
+
+<!-- FAQ 6 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        How much of my education expenses can I finance through a loan?
+    </div>
+    <div class="faq-answer">
+        Most lenders finance up to <strong>90%–100%</strong> of the total education cost
+depending on the course, institution, and student profile.
+    </div>
+</div>
+
+<!-- FAQ 7 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        What is the loan repayment tenure?
+    </div>
+    <div class="faq-answer">
+        Education loan repayment tenure usually ranges between
+<strong>5 to 15 years</strong> depending on the lender and loan amount.
+    </div>
+</div>
+
+<!-- FAQ 8 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        Can I prepay my education loan?
+    </div>
+    <div class="faq-answer">
+        Yes. Most banks allow prepayment of education loans without penalty,
+though policies may vary between lenders.
+</div>
+</div>
+
+<!-- FAQ 9 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+       How is the education loan disbursed?
+    </div>
+    <div class="faq-answer">
+        Education loan funds are usually disbursed directly to the educational
+institution in installments as per the fee schedule. In some cases,
+funds for accommodation or other expenses may be credited to the
+student’s bank account.
+    </div>
+</div>
+
+<!-- FAQ 10 -->
+<div class="faq-item">
+    <div class="faq-question">
+        <span class="faq-icon">+</span>
+        What happens if my co-applicant’s credit score is low?
+    </div>
+    <div class="faq-answer">
+        If the co-applicant’s credit score is low, the bank may still consider
+the application but may ask for additional collateral, a stronger
+co-applicant, or may offer a lower loan amount.
+    </div>
+</div>
+
+<!-- FAQ 11 -->
+<div class="faq-item">
+<div class="faq-question">
+<span class="faq-icon">+</span>
+What documents are required to apply for an education loan?
+</div>
+
+<div class="faq-answer">
+Common documents required include:
+<ul>
+<li>Identity proof (Aadhaar Card / Passport / PAN Card)</li>
+<li>Address proof</li>
+<li>Admission letter from the institution</li>
+<li>Academic records and mark sheets</li>
+<li>Income proof of co-applicant</li>
+<li>Bank statements</li>
+<li>Passport and visa (for study abroad loans)</li>
+</ul>
+</div>
+</div>
+
+</div> 
+</section> 
+<?php require_once __DIR__ . '/../components/apply-form-ui.php'; ?>
+<?php require_once __DIR__ . '/../components/schedule_modal.php'; ?>
+<?php require_once __DIR__ . '/../components/footer.php'; ?>
+
+<script src="/LoanExpertsWebsite/Website/js/main.js" defer></script>
+</body>
+</html>

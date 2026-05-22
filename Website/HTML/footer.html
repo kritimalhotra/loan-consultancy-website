@@ -1,0 +1,135 @@
+<footer class="main-footer">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <div class="footer-container">
+
+    <!-- Column 1: Logo -->
+<div class="footer-col footer-logo">
+  <img src="images/Loan Experts Logo.png" alt="Loan Experts Logo">
+</div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="join-our-team.html">Join Our Team</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Services -->
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="personal.html">Personal Loan</a></li>
+        <li><a href="business.html">Business Loan</a></li>
+        <li><a href="housing.html">Housing Loan</a></li>
+        <li><a href="LAP.html">Loan Against Property</a></li>
+        <li><a href="education.html">Education Loan</a></li>
+        <li><a href="project.html">Project Loan</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Contact -->
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p class="contact-item">
+  <img src="images/footer-call.png" class="contact-icon">
+  <span>+91 97817 04214</span>
+</p>
+
+<p class="contact-item">
+  <img src="images/footer location.png" class="contact-icon">
+  <span>
+    4th Floor, B-Block, Opp. Municipal Corporation, Ranjit Avenue, Amritsar, Punjab
+  </span>
+</p>
+
+<p class="contact-item">
+  <img src="images/mail.png" class="contact-icon">
+  <span>loanexpertsamritsar@gmail.com</span>
+</p>
+    </div>
+
+  </div>
+
+  <div class="footer-social">
+  <a href="https://www.facebook.com/loanexpertsamritsar/" target="_blank">
+    <img src="images/facebook-logo-facebook-icon-transparent-free-png.webp" 
+         alt="Facebook" class="social-icon fb-icon">
+  </a>
+
+  <a href="https://www.instagram.com/loanexpertsamritsar/" target="_blank">
+    <img src="images/Instagram_logo_2016.svg.webp" 
+         alt="Instagram" class="social-icon insta-icon">
+  </a>
+
+  <a href="https://www.youtube.com/@loanexperts1890" target="_blank">
+    <img src="images/youtube-6616310_1280.webp" 
+         alt="YouTube" class="social-icon yt-icon">
+  </a>
+</div>
+ <!-- Follow us Button -->
+  <div class="footer-bottom">
+  <a target="_blank" class="follow-btn">
+    Follow Us
+  </a>
+</div>
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© 2026 Loan Experts. All Rights Reserved.</p>
+  </div>
+</footer>
+<!-- Appointment Popup -->
+<div id="appointmentModal" class="appointment-modal">
+
+  <div class="appointment-box">
+
+    <span class="close-appointment" onclick="closeAppointment()">×</span>
+
+    <h2>Schedule an Appointment</h2>
+    <p>Fill your details and our team will contact you soon.</p>
+
+    <form class="appointment-form"
+      onsubmit="showConfirmation(event)">
+
+      <input type="text" placeholder="Full Name" required>
+
+      <input 
+type="tel" 
+name="phone"
+placeholder="Phone Number"
+pattern="[0-9]{10}"
+maxlength="10"
+required
+oninvalid="this.setCustomValidity('Please enter a valid number')"
+oninput="this.setCustomValidity('')">
+
+      <input type="date"> 
+      <input 
+type="text" 
+placeholder="Select Time" 
+onfocus="this.type='time'" 
+onblur="if(!this.value)this.type='text'" 
+min="10:00" 
+max="18:00" 
+required>
+
+      <button type="submit" class="appointment-submit">Book Appointment</button>
+
+    </form>
+    <!-- Appointment Confirmation -->
+    <div id="confirmationMessage" class="confirmation-box">
+  <h3>Appointment Confirmed</h3>
+  <p>Your appointment has been scheduled at our office.</p>
+  <p><strong>Address:</strong><br>
+  SCO 113, opposite Municipal Corporation,<br>
+  B-Block Ranjit Avenue, Amritsar</p>
+</div>
+
+  </div>
+
+</div>
